@@ -1,0 +1,62 @@
+const btn = document.getElementById("btn");
+const nameElement = document.getElementById("name"); // Get the name element
+
+const colors = [
+  "blue",
+  "red",
+  "green",
+  "yellow",
+  "purple",
+  "orange",
+  "pink",
+  "brown",
+  "gray",
+  "black",
+  "white",
+  "cyan",
+  "magenta",
+  "lime",
+  "teal",
+  "navy",
+  "maroon",
+  "olive",
+  "silver",
+  "gold",
+  "violet",
+  "indigo",
+  "crimson",
+  "turquoise",
+  "salmon",
+  "beige",
+  "lavender",
+  "peach",
+  "ivory",
+  "tan",
+  "coral",
+  "khaki",
+  "plum",
+  "orchid",
+  "goldenrod",
+  "chartreuse",
+  "lightblue",
+  "linen",
+  "peru",
+  "seashell",
+  "sienna",
+  "snow",
+  "thistle",
+  "tomato",
+  "wheat",
+  "aquamarine",
+  "azure",
+  "bisque",
+  "chocolate",
+  "firebrick",
+  "honeydew",
+];
+nameElement.innerHTML = "Color:";
+btn.addEventListener("click", () => {
+  const index = Math.floor(Math.random() * colors.length); // Calculate a random index
+  nameElement.innerHTML = `Color: ${colors[index]}`; // Update text content of the name element
+  document.body.style.backgroundColor = colors[index]; // Change background color
+});
